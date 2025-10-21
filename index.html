@@ -9,7 +9,7 @@
       font-family: Arial, sans-serif;
       background: #fdfdfd;
       color: #222;
-      max-width: 800px;
+      max-width: 900px;
       margin: 40px auto;
       padding: 0 20px;
       line-height: 1.6;
@@ -19,23 +19,79 @@
     img { max-width: 100%; border-radius: 8px; }
     a { color: #004aad; text-decoration: none; }
     a:hover { text-decoration: underline; }
+
+    /* Project card styling */
+    .projects {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+      margin-top: 20px;
+    }
+    .project {
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 16px;
+      background: #fff;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      transition: transform 0.2s ease;
+    }
+    .project:hover {
+      transform: translateY(-3px);
+    }
+    .project-title {
+      font-weight: bold;
+      font-size: 1.1em;
+      margin-bottom: 6px;
+    }
+    .project-desc {
+      margin-bottom: 8px;
+    }
+    @media (min-width: 700px) {
+      .projects {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
   </style>
 </head>
 <body>
   <h1>Christina Cavalluzzo</h1>
   <h3>Robotics & Mechanical Engineer</h3>
-  <p>I’m passionate about designing and fabricating soft robotic actuators, wearable systems, and bio-inspired devices. I recently earned my M.S. in Robotics and Autonomous Systems at Boston University.</p>
+
+  <p>
+    I am a Robotics and Mechanical Engineer passionate about designing and building human-centered robotic systems. 
+    I have experience in designing and fabricating soft robotic actuators, wearable systems, and bio-inspired devices, 
+    and I enjoy bridging mechanical design and robotics to create devices that interact safely with people.
+  </p>
+  <p>
+    I recently earned my M.S. in Robotics and Autonomous Systems from Boston University. My B.S. was in Mechanical Engineering 
+    at Rensselaer Polytechnic Institute (RPI) with a minor in Studio Arts, and was also a member of the RPI Varsity Swim Team, 
+    specializing in sprint events.
+  </p>
 
   <h2>Projects</h2>
-  <ul>
-    <li><b>Soft Robotic Gripper:</b> 3-arm silicone Pneu-Net gripper with integrated contact sensing.</li>
-    <li><b>Two-Link Manipulator Simulation:</b> Python and MATLAB visualization of configuration space on a torus.</li>
-    <li><b>Modified A* Algorithm:</b> Combined A* and RRT concepts for faster path planning.</li>
-  </ul>
+  <div class="projects">
+    <div class="project">
+      <div class="project-title">Soft Robotic Gripper</div>
+      <div class="project-desc">3-arm silicone Pneu-Net gripper with integrated contact sensing for object manipulation.</div>
+      <a href="https://github.com/ccavalluzzo/soft-gripper" target="_blank">View Project →</a>
+    </div>
+
+    <div class="project">
+      <div class="project-title">Two-Link Manipulator Simulation</div>
+      <div class="project-desc">Python and MATLAB visualization of a two-link manipulator’s configuration space on a torus manifold.</div>
+      <a href="https://github.com/ccavalluzzo/two-link-torus" target="_blank">View Code →</a>
+    </div>
+
+    <div class="project">
+      <div class="project-title">Modified A* Algorithm</div>
+      <div class="project-desc">Developed a hybrid of A* and RRT algorithms to improve path planning efficiency in static environments.</div>
+      <a href="https://github.com/ccavalluzzo/astar-rrt" target="_blank">Read Paper →</a>
+    </div>
+  </div>
 
   <h2>Contact</h2>
   <p>
-    <a href="mailto:christina@example.com">christina@example.com</a><br>
+    <a href="mailto:christinacavalluzzo@gmail.com">christinacavalluzzo@gmail.com</a><br>
     <a href="https://www.linkedin.com/in/christinacavalluzzo/">LinkedIn</a> |
     <a href="https://github.com/ccavalluzzo">GitHub</a>
   </p>
