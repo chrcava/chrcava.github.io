@@ -111,6 +111,60 @@
     
   </div>
 
+  <style>
+  .cad-spotlight {
+    background: #f0f4f8;
+    border-left: 5px solid #004aad;
+    padding: 25px;
+    margin: 30px 0;
+    border-radius: 0 8px 8px 0;
+  }
+  .cad-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .cad-image-container {
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    background: #fff;
+  }
+  .feature-tag {
+    background: #004aad;
+    color: white;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 0.8em;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  @media (min-width: 750px) {
+    .cad-grid { flex-direction: row; align-items: start; }
+    .cad-image-container { flex: 1.5; }
+    .cad-text { flex: 1; }
+  }
+</style>
+
+<div class="cad-spotlight">
+  <h2>Featured CAD Deep-Dive: Parametric Blender Assembly</h2>
+  <div class="cad-grid">
+    <div class="cad-image-container">
+      <img src="your-image-path.jpg" alt="Siemens NX Model History and Pitcher Design">
+    </div>
+    <div class="cad-text">
+      <span class="feature-tag">Software: Siemens NX</span>
+      <p><strong>Design Intent & Methodology:</strong></p>
+      <p>This project showcases advanced <b>Parametric Modeling</b> within a Master Assembly context. Even without the final physical files, the model history demonstrates professional "CAD Hygiene":</p>
+      <ul>
+        <li><b>Robust Constraints:</b> 100% "Fully-Constrained" sketches to ensure model stability during dimension changes.</li>
+        <li><b>Complex Surfacing:</b> Utilized <i>Through Curves</i> and <i>Sweeps</i> to develop ergonomic transitions for the pour-spout and handle.</li>
+        <li><b>DfM (Design for Manufacturing):</b> Integrated constant-wall-thickness <i>Shelling</i> and draft analysis for injection molding viability.</li>
+      </ul>
+      <p><i>Note: Source files archived. Screenshot captures the feature dependency tree and Boolean operations logic.</i></p>
+    </div>
+  </div>
+</div>
+
   <h2>Other Projects</h2>
   <div class="projects">
 
